@@ -94,7 +94,6 @@ my-project/
 
 * Use your npm username for scoped packages: `@username/package`.
 * Keep packages small and focused (one class/function or a related set).
-* Update version numbers following [Semantic Versioning](https://semver.org/).
 
 ---
 
