@@ -5,7 +5,15 @@ import fs from "fs-extra";
 import path from "path";
 import { execSync } from "child_process";
 import inquirer from "inquirer";
+import { fileURLToPath } from "url";
 
+
+// __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// now resolve packages folder
+const globalPackagesPath = path.resolve(__dirname, "../../packages");
 const program = new Command();
 
 program
@@ -110,47 +118,58 @@ program
         }
     });
 
-// Search for packages (npm)
+
+
 program
-    .command("search <term>")
-    .description("Search npm for CPM packages matching a term")
-    .action((term) => {
-        try {
-            console.log(chalk.blue(`🔍 Searching npm for packages matching "${term}"...`));
-            execSync(`npm search ${term}`, { stdio: "inherit" });
-        } catch (err: any) {
-            console.error(chalk.red("❌ Search failed:"), err.message);
-            process.exit(1);
-        }
-    });
+  .command("search <term>")
+  .description("Search local CPM packages")
+  .action((term) => {
+    if (!fs.existsSync(globalPackagesPath)) {
+      console.log(chalk.yellow("No global CPM packages found."));
+      return;
+    }
 
-// Install package (from npm)
+    const pkgs = fs.readdirSync(globalPackagesPath)
+      .filter(p => p.includes(term));
+
+    if (pkgs.length === 0) {
+      console.log(chalk.yellow(`No CPM packages found matching "${term}"`));
+      return;
+    }
+
+    console.log(chalk.blue(`CPM packages matching "${term}":`));
+    pkgs.forEach(p => console.log(" -", p));
+  });
+
 program
-    .command("install <packageName>")
-    .description("Install a CPM package (from npm)")
-    .action((packageName) => {
-        try {
-            console.log(chalk.blue(`📦 Installing ${packageName} from npm...`));
-            execSync(`npm pack ${packageName}`, { stdio: "inherit" });
+  .command("install <packageName>")
+  .description("Install a CPM package (local or global)")
+  .action((packageName) => {
+    // Check local project packages first
+    let pkgPath = path.join(process.cwd(), "packages", packageName);
+    if (!fs.existsSync(pkgPath)) {
+      // Fall back to global CPM packages
+      pkgPath = path.join(globalPackagesPath, packageName);
+      if (!fs.existsSync(pkgPath)) {
+        console.error(chalk.red(`❌ Package ${packageName} not found in local or global CPM packages`));
+        process.exit(1);
+      }
+    }
 
-            const tarball = fs.readdirSync(process.cwd()).find(f => f.startsWith(packageName) && f.endsWith(".tgz"));
-            if (!tarball) throw new Error("Package tarball not found after npm pack");
+    const destDir = path.join(process.cwd(), ".cpm", packageName);
+    fs.ensureDirSync(destDir);
+    fs.copySync(pkgPath, destDir, { overwrite: true });
 
-            const destDir = path.join(process.cwd(), ".cpm");
-            fs.ensureDirSync(destDir);
-            execSync(`tar -xzf "${tarball}" -C "${destDir}"`);
-            fs.removeSync(tarball);
+    const cpmData = getCpmJson();
+    cpmData.packages[packageName] = { path: destDir };
+    saveCpmJson(cpmData);
 
-            const cpmData = getCpmJson();
-            cpmData.packages[packageName] = { path: path.join(destDir, "package") };
-            saveCpmJson(cpmData);
+    console.log(chalk.green(`✅ Installed ${packageName} locally to project at ${destDir}`));
+    console.log(chalk.yellow(`Use it via: import pkg from './.cpm/${packageName}/index.ts'`));
+  });
 
-            console.log(chalk.green(`✅ Installed ${packageName} to project`));
-        } catch (err: any) {
-            console.error(chalk.red("❌ Failed to install package:"), err.message);
-            process.exit(1);
-        }
-    });
+
+
 
 // List installed packages
 program
