@@ -30,3 +30,5 @@ Thumbs.db
 
 # CPM local registry (optional, if you want to exclude)
 .cpm/
+
+README copy.md
