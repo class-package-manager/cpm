@@ -1,6 +1,6 @@
 {
   "name": "class-package-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Class Package Manager – manage sharable classes/components",
   "main": "dist/index.js",
   "bin": {
@@ -12,7 +12,14 @@
     "dev": "nodemon --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cpm", "cli", "components","classes","functions","micro"],
+  "keywords": [
+    "cpm",
+    "cli",
+    "components",
+    "classes",
+    "functions",
+    "micro"
+  ],
   "author": "Pius Mafabi",
   "license": "MIT",
   "dependencies": {
