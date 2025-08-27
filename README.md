@@ -82,7 +82,7 @@ cpm uninstall hello
 ```
 my-project/
 ├─ .cpm/
-│  └─ @username_hello/
+│  └─ hello/
 ├─ src/
 │  └─ index.ts
 └─ package.json
