@@ -1,0 +1,9 @@
+{
+  "name": "http-client",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple HTTP client wrapper",
+  "author": "cpm",
+  "license": "MIT"
+}

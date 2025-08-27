@@ -1,0 +1,9 @@
+{
+  "name": "date-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Common date utilities",
+  "author": "cpm",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "string-truncate",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Truncate strings to a specified length",
+  "author": "cpm",
+  "license": "MIT"
+}

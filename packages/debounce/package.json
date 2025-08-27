@@ -1,0 +1,9 @@
+{
+  "name": "debounce",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Debounce function calls",
+  "author": "cpm",
+  "license": "MIT"
+}

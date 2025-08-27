@@ -1,0 +1,9 @@
+{
+  "name": "debug",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Lightweight debug wrapper with namespace",
+  "author": "cpm",
+  "license": "MIT"
+}

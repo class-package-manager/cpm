@@ -1,0 +1,9 @@
+{
+  "name": "cookie-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple cookie management utilities",
+  "author": "cpm",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "url-validator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Validate URLs",
+  "author": "cpm",
+  "license": "MIT"
+}

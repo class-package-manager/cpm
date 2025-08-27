@@ -1,0 +1,9 @@
+{
+  "name": "password-strength",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Basic password strength checker",
+  "author": "cpm",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "unique-array",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Return array with unique values",
+  "author": "cpm",
+  "license": "MIT"
+}

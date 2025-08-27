@@ -1,0 +1,9 @@
+{
+  "name": "event-emitter",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple event emitter",
+  "author": "cpm",
+  "license": "MIT"
+}

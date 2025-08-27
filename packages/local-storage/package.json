@@ -1,0 +1,9 @@
+{
+  "name": "local-storage",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Wrapper for localStorage",
+  "author": "cpm",
+  "license": "MIT"
+}

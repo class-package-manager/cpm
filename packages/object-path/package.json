@@ -1,0 +1,9 @@
+{
+  "name": "object-path",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Get value from object by path",
+  "author": "cpm",
+  "license": "MIT"
+}

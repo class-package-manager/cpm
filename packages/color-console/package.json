@@ -1,0 +1,9 @@
+{
+  "name": "color-console",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Console colors utility",
+  "author": "cpm",
+  "license": "MIT"
+}

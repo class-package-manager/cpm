@@ -1,0 +1,9 @@
+{
+  "name": "date-format",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Format Date objects to string",
+  "author": "cpm",
+  "license": "MIT"
+}

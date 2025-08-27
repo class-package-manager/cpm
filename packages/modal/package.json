@@ -1,0 +1,9 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple modal popup simulation",
+  "author": "cpm",
+  "license": "MIT"
+}

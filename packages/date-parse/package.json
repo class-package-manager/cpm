@@ -1,0 +1,9 @@
+{
+  "name": "date-parse",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Parse date strings into Date objects",
+  "author": "cpm",
+  "license": "MIT"
+}

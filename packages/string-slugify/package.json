@@ -1,0 +1,9 @@
+{
+  "name": "string-slugify",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Convert strings into URL-friendly slugs",
+  "author": "cpm",
+  "license": "MIT"
+}

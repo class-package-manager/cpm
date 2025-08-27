@@ -1,0 +1,9 @@
+{
+  "name": "time-ago",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Convert Date to human-readable time ago",
+  "author": "cpm",
+  "license": "MIT"
+}

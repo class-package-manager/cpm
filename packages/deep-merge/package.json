@@ -1,0 +1,9 @@
+{
+  "name": "deep-merge",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Deep merge objects",
+  "author": "cpm",
+  "license": "MIT"
+}

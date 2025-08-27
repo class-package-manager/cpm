@@ -1,0 +1,9 @@
+{
+  "name": "query-string",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Parse and stringify query strings",
+  "author": "cpm",
+  "license": "MIT"
+}

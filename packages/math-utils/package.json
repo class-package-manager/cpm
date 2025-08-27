@@ -1,0 +1,9 @@
+{
+  "name": "math-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Common math utilities",
+  "author": "cpm",
+  "license": "MIT"
+}

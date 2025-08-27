@@ -1,0 +1,9 @@
+{
+  "name": "throttle",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Throttle function calls",
+  "author": "cpm",
+  "license": "MIT"
+}

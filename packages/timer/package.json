@@ -1,0 +1,9 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple timer utility",
+  "author": "cpm",
+  "license": "MIT"
+}

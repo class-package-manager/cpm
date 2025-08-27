@@ -1,0 +1,9 @@
+{
+  "name": "api-cache",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Simple API caching utility",
+  "author": "cpm",
+  "license": "MIT"
+}

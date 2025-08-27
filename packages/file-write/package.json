@@ -1,0 +1,9 @@
+{
+  "name": "file-write",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Write file contents synchronously",
+  "author": "cpm",
+  "license": "MIT"
+}

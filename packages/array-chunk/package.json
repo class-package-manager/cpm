@@ -1,0 +1,9 @@
+{
+  "name": "array-chunk",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Split array into chunks",
+  "author": "cpm",
+  "license": "MIT"
+}

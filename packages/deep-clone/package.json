@@ -1,0 +1,9 @@
+{
+  "name": "deep-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "description": "Deep clone objects",
+  "author": "cpm",
+  "license": "MIT"
+}
